@@ -31,12 +31,10 @@ public class FirePokemon extends Pokemon {
             }
 
         }
+
         enemy.setHp(enemy.getHp() - damage);
-
         System.out.println(enemy.getName() + " loses " + damage + " hp");
-
         System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left");
-
     }
 
     void pyroBall(Pokemon name, Pokemon enemy) {
@@ -60,12 +58,10 @@ public class FirePokemon extends Pokemon {
             }
 
         }
+
         enemy.setHp(enemy.getHp() - damage);
-
         System.out.println(enemy.getName() + " loses " + damage + " hp");
-
         System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left");
-
     }
 
     void fireLash(Pokemon name, Pokemon enemy) {
@@ -90,9 +86,7 @@ public class FirePokemon extends Pokemon {
         }
 
         enemy.setHp(enemy.getHp() - damage);
-
         System.out.println(enemy.getName() + " loses " + damage + " hp");
-
         System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left");
     }
 
@@ -118,9 +112,7 @@ public class FirePokemon extends Pokemon {
         }
 
         enemy.setHp(enemy.getHp() - damage);
-
         System.out.println(enemy.getName() + " loses " + damage + " hp");
-
         System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left");
     }
 

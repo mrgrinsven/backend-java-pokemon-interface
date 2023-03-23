@@ -31,12 +31,10 @@ public class ElectricPokemon extends Pokemon {
             }
 
         }
+
         enemy.setHp(enemy.getHp() - damage);
-
         System.out.println(enemy.getName() + " loses " + damage + " hp");
-
         System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left");
-
     }
 
     void electroBall(Pokemon name, Pokemon enemy) {
@@ -60,12 +58,10 @@ public class ElectricPokemon extends Pokemon {
             }
 
         }
+
         enemy.setHp(enemy.getHp() - damage);
-
         System.out.println(enemy.getName() + " loses " + damage + " hp");
-
         System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left");
-
     }
 
     void thunder(Pokemon name, Pokemon enemy) {
@@ -74,27 +70,31 @@ public class ElectricPokemon extends Pokemon {
         switch (enemy.getType()) {
             case "water" -> {
                 damage = 30;
+                enemy.setHp(enemy.getHp() - damage);
+                System.out.println(enemy.getName() + " loses " + damage + " hp");
             }
 
             case "grass" -> {
                 damage = 25;
+                enemy.setHp(enemy.getHp() - damage);
+                System.out.println(enemy.getName() + " loses " + damage + " hp");
             }
 
             case "fire" -> {
                 damage = 20;
+                enemy.setHp(enemy.getHp() - damage);
+                System.out.println(enemy.getName() + " loses " + damage + " hp");
             }
 
             case "electric" -> {
                 damage = 15;
+                System.out.println("Thunder boosts " + enemy.getName() +"'s hp");
+                enemy.setHp(enemy.getHp() + damage);
+                System.out.println(enemy.getName() + " gains " + damage + " hp");
             }
         }
 
-        enemy.setHp(enemy.getHp() - damage);
-
-        System.out.println(enemy.getName() + " loses " + damage + " hp");
-
         System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left");
-
     }
 
     void voltTackle(Pokemon name, Pokemon enemy) {
@@ -119,11 +119,8 @@ public class ElectricPokemon extends Pokemon {
         }
 
         enemy.setHp(enemy.getHp() - damage);
-
         System.out.println(enemy.getName() + " loses " + damage + " hp");
-
         System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left");
-
     }
 
     List<String> getAttacks() {

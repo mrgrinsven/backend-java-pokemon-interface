@@ -31,12 +31,10 @@ public class GrassPokemon extends Pokemon {
             }
 
         }
+
         enemy.setHp(enemy.getHp() - damage);
-
         System.out.println(enemy.getName() + " loses " + damage + " hp");
-
         System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left");
-
     }
 
     public void solarBeam(Pokemon name, Pokemon enemy) {
@@ -60,12 +58,10 @@ public class GrassPokemon extends Pokemon {
             }
 
         }
+
         enemy.setHp(enemy.getHp() - damage);
-
         System.out.println(enemy.getName() + " loses " + damage + " hp");
-
         System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left");
-
     }
 
     public void leechSeed(Pokemon name, Pokemon enemy) {
@@ -90,9 +86,8 @@ public class GrassPokemon extends Pokemon {
         }
 
         enemy.setHp(enemy.getHp() - damage);
-
-        System.out.println(enemy.getName() + " loses " + damage + " hp");
-
+        name.setHp(name.getHp() + damage);
+        System.out.println(enemy.getName() + " loses " + damage + " hp and " + name.getName() + " gains" + damage + " hp");
         System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left");
     }
 
@@ -119,11 +114,8 @@ public class GrassPokemon extends Pokemon {
         }
 
         enemy.setHp(enemy.getHp() - damage);
-
         System.out.println(enemy.getName() + " loses " + damage + " hp");
-
         System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left");
-
     }
 
     List<String> getAttacks() {

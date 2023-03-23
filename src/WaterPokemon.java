@@ -31,12 +31,10 @@ public class WaterPokemon extends Pokemon {
             }
 
         }
+
         enemy.setHp(enemy.getHp() - damage);
-
         System.out.println(enemy.getName() + " loses " + damage + " hp");
-
         System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left");
-
     }
 
     void hydroPump(Pokemon name, Pokemon enemy) {
@@ -60,12 +58,10 @@ public class WaterPokemon extends Pokemon {
             }
 
         }
+
         enemy.setHp(enemy.getHp() - damage);
-
         System.out.println(enemy.getName() + " loses " + damage + " hp");
-
         System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left");
-
     }
 
     void hydroCanon(Pokemon name, Pokemon enemy) {
@@ -90,11 +86,8 @@ public class WaterPokemon extends Pokemon {
         }
 
         enemy.setHp(enemy.getHp() - damage);
-
         System.out.println(enemy.getName() + " loses " + damage + " hp");
-
         System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left");
-
     }
 
     void rainDance(Pokemon name, Pokemon enemy) {
@@ -103,27 +96,32 @@ public class WaterPokemon extends Pokemon {
         switch (enemy.getType()) {
             case "fire" -> {
                 damage = 35;
+                enemy.setHp(enemy.getHp() - damage);
+                System.out.println(enemy.getName() + " loses " + damage + " hp");
             }
 
             case "electric" -> {
-                damage = 30;
+                damage = 0;
+                System.out.println("Randance has no effect on " + enemy.getName());
+                enemy.setHp(enemy.getHp() - damage);
+                System.out.println(enemy.getName() + " loses " + damage + " hp");
             }
 
             case "grass" -> {
                 damage = 25;
+                System.out.println("Raindance boosts " + enemy.getName() +"'s hp");
+                enemy.setHp(enemy.getHp() + damage);
+                System.out.println(enemy.getName() + " gains " + damage + " hp");
             }
 
             case "water" -> {
                 damage = 20;
+                enemy.setHp(enemy.getHp() - damage);
+                System.out.println(enemy.getName() + " loses " + damage + " hp");
             }
         }
 
-        enemy.setHp(enemy.getHp() - damage);
-
-        System.out.println(enemy.getName() + " loses " + damage + " hp");
-
         System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left");
-
     }
 
     List<String> getAttacks() {
